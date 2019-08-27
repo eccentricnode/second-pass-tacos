@@ -6,7 +6,7 @@ import { AuthService, NotifyService } from '@second-pass/core-data';
 @Component({
   selector: 'second-pass-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.sscss']
+  styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
   form: FormGroup;

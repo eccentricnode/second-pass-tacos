@@ -14,7 +14,7 @@ import {
   TacoUpdated,
   DeleteTaco,
   TacoDeleted
-} from './tacos.actions';\
+} from './tacos.actions';
 import { TacosService, Taco } from '@second-pass/core-data';
 
 @Injectable()

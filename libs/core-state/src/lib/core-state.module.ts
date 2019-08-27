@@ -4,17 +4,21 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
-import * as fromTacos from './tacos/tacos.reducer';
-import { TacosEffects } from './tacos/tacos.effects';
+import { reducers } from '.';
+import { TacosEffects } from './tacos/tacos.effects'
+import { TacosFacade } from './tacos/tacos.facade';
 
 @NgModule({
   imports: [
     CommonModule,
-    StoreModule.forRoot(),
+    StoreModule.forRoot(reducers),
     EffectsModule.forRoot([TacosEffects]),
     StoreDevtoolsModule.instrument({
       maxAge: 10
     }),
+  ],
+  providers: [
+    TacosFacade
   ]
 })
 export class CoreStateModule {}
