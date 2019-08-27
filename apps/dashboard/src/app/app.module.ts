@@ -12,9 +12,10 @@ import { MaterialModule } from '@second-pass/material';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './routing.module';
 import { LoginComponent } from './login/login.component';
+import { TacosComponent } from './tacos/tacos.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent],
+  declarations: [AppComponent, LoginComponent, TacosComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
