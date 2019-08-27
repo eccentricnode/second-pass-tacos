@@ -13,9 +13,11 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './routing.module';
 import { LoginComponent } from './login/login.component';
 import { TacosComponent } from './tacos/tacos.component';
+import { TacosListComponent } from './tacos/tacos-list/tacos-list.component';
+import { TacoDetailsComponent } from './tacos/taco-details/taco-details.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, TacosComponent],
+  declarations: [AppComponent, LoginComponent, TacosComponent, TacosListComponent, TacoDetailsComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

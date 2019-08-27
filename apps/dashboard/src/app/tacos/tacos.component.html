@@ -1,1 +1,18 @@
-<p>tacos works!</p>
+<div class="wrapper">
+    <div class="list-grid">
+        <second-pass-tacos-list
+            [tacos]="tacos$ | async"
+            (selected)="selectTaco($event)"
+            (deleted)="removeTaco($event)">
+        </second-pass-tacos-list>
+    </div>
+
+    <div class="details-grid">
+        <second-pass-taco-details
+            [group]="form"
+            [taco]="selectedTaco$ | async"
+            (submitted)="saveTaco($event)"
+            (cancelled)="reset($event)">
+        </second-pass-taco-details>
+    </div>
+</div>

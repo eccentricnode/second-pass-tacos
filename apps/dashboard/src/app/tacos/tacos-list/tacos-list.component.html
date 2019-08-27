@@ -1,0 +1,20 @@
+<mat-card>
+    <mat-card-content>
+        <h3 mat-subheader>Taco's</h3>
+        <mat-list *ngIf="tacos.length; else elseBlock">
+            <mat-list-item *ngFor="let taco of tacos" class="mat-list-option"
+                (click)="select(taco)">
+                <h4 mat-line>Name: {{taco.name}}</h4>
+                <span mat-line>Calories: {{taco.calories}}</span>
+                <button mat-mini-fab *ngIf="!readonly" (click)="remove(taco);$event.stopImmediatePropagation()">
+                    <mat-icon>clear</mat-icon>
+                </button>
+            </mat-list-item>
+        </mat-list>
+        <ng-template #elseBlock>
+                <div class="spinner">
+                    <mat-spinner mode="indeterminate"></mat-spinner>
+                </div>
+            </ng-template>
+    </mat-card-content>
+</mat-card>
